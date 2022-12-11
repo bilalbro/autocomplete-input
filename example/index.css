@@ -1,0 +1,45 @@
+.autocomplete {
+   font-family: 'Lato';
+   font-size: 15px;
+   position: relative;
+   display: inline-block;
+}
+
+.autocomplete_input {
+   font-family: inherit;
+   font-size: inherit;
+   border: 1px solid #ddd;
+   padding: 10px;
+   display: block;
+   width: 150px;
+   outline: none;
+}
+
+.autocomplete_suggestions-box {
+   position: absolute;
+   width: 100%;
+   background-color: #f9f9f9;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+   margin-top: -1px
+}
+
+.autocomplete_suggestion,
+.autocomplete_text {
+   padding: 10px;
+   cursor: pointer;
+}
+
+.autocomplete_suggestion {
+   cursor: pointer;
+}
+
+.autocomplete_suggestion--sel,
+.autocomplete_suggestion:hover {
+   background-color: blueviolet;
+   color: white;
+}
+
+.autocomplete_text {
+   opacity: 0.6;
+}
