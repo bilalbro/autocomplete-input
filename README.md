@@ -22,7 +22,7 @@ Believe it or not, that's a huge advantage!
 
 ### 2. rollup.js
 
-For the bundling, I used rollup.js, which is quite a simple, yet powerful, bundler.
+For the bundling, I used **rollup.js**, which is quite a simple, yet powerful, bundler.
 
 
 ## A little about the library
@@ -40,6 +40,12 @@ With this displayed-and-hidden-input approach, clicking the suggestion showing '
 I hope this makes sense...
 
 ## Using this library
+
+Let's now see how to use this library.
+
+```
+<AutocompleteInput {/* The following props can go here. */} />
+```
 
 So coming back to the point, here are the supported props of `AutocompleteInput`:
 
