@@ -43,7 +43,7 @@ I hope this makes sense...
 
 Let's now see how to use this library.
 
-```
+```jsx
 <AutocompleteInput {/* The following props can go here. */} />
 ```
 
