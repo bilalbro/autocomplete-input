@@ -47,7 +47,7 @@ Let's now see how to use this library.
 <AutocompleteInput {/* The following props can go here. */} />
 ```
 
-So coming back to the point, here are the supported props of `AutocompleteInput`:
+Here are the supported props:
 
 - **`value`** (`string`) - The starting value of the underlying displayed `<input>` element.
 - **`name`** (`string`) - The name of the underlying hidden `<input>` element, which will be used to submit the entered value to the containing form.
