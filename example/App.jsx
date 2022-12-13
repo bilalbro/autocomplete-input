@@ -6,6 +6,7 @@ function App()
 {
    return (
       <AutocompleteInput
+         placeholder="Type a language name"
          name="lang"
          data={['Python', 'Perl', 'ActionScript', 'PHP', 'Pascal']}
          noMatchText={v => `Thing '${v}' would be added`}

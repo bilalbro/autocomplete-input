@@ -15,11 +15,11 @@ export default function AutocompleteInput({
    getInputValue = s => s,
    getHiddenInputValue = s => s,
    getSuggestionValue = s => s,
-   filterFunction = (value, s) => s.toLowerCase().indexOf(value.toLowerCase()) !== -1
+   filterFunction = (value, s) => s.toLowerCase().indexOf(value.toLowerCase()) !== -1,
+   ...props
 })
 {
    const [autocompleter, dispatchForAutocompleter] = useReducer(autocompleterReducer, {
-      // The value of the input field
       value,
       hiddenValue: value,
       data,
@@ -28,15 +28,9 @@ export default function AutocompleteInput({
    });
 
    const [suggestionsBox, dispatchForSuggestionsBox] = useReducer(suggestionsBoxReducer, {
-      // The index of the entry selected.
       entrySelected: -1,
-
-      // Whether or not the suggestion box is shown.
       isShown: false,
-
-      // The list of matching suggestions.
       suggestions: data,
-
       allOnEmpty,
       filterFunction,
       getSuggestionValue,
@@ -77,7 +71,8 @@ export default function AutocompleteInput({
             e.preventDefault();
             dispatchForAutocompleter({
                type: 'entryClick',
-               suggestion: suggestionsBox.entrySelected !== -1 && suggestionsBox.suggestions[suggestionsBox.entrySelected]
+               suggestion: suggestionsBox.entrySelected !== -1 &&
+                  suggestionsBox.suggestions[suggestionsBox.entrySelected]
             });
             dispatchForSuggestionsBox({
                type: 'entryClick'
@@ -117,7 +112,7 @@ export default function AutocompleteInput({
       <div className="autocomplete">
          <Input value={autocompleter.value} className="autocomplete_input"
          onChange={onChange} type="text" onKeyDown={onKeyDown} onFocus={onFocus}
-         onBlur={onBlur} />
+         onBlur={onBlur} {...props} />
          <input name={name} type="hidden" value={autocompleter.hiddenValue} />
 
          <SuggestionsBox {...{autocompleter, dispatchForAutocompleter,

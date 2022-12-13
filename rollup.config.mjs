@@ -5,12 +5,9 @@ import replace from "@rollup/plugin-replace";
 
 export default {
    input: 'example/App.jsx',
-   external: [
-      'react',
-   ],
    output: {
       file: 'example/index.js',
-      format: 'umd',
+      format: 'iife',
    },
    plugins: [
       nodeResolve({
