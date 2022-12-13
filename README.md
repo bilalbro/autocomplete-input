@@ -71,4 +71,4 @@ Here are the supported props:
 
 ## Example
 
-To see a working example, head over to the `example` directory in the repo, and clone it to your computer. Then just open up the `index.html` file in your browser.
+To see a working example, head over to the `example` directory in the repo, and clone it to your computer. Then just open up the `index.html` file in your browser and voila! — you have a live autocompleter in front of you.
