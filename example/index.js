@@ -8139,15 +8139,17 @@
 	}
 
 	function App() {
-	  return /*#__PURE__*/React.createElement(AutocompleteInput, {
+	  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "AutocompleteInput"), /*#__PURE__*/React.createElement("p", null, "A simple autocompleter built using React, by ", /*#__PURE__*/React.createElement("a", {
+	    href: "https://github.com/bilalbro/"
+	  }, "@bilalbro"), "."), /*#__PURE__*/React.createElement(AutocompleteInput, {
 	    placeholder: "Type a language name",
 	    name: "lang",
 	    data: ['Python', 'Perl', 'ActionScript', 'PHP', 'Pascal'],
-	    noMatchText: v => `Thing '${v}' would be added`,
+	    noMatchText: v => `Language '${v}' doesn't exist in our store.`,
 	    allOnEmpty: true,
 	    getHiddenInputValue: v => v.toUpperCase(),
 	    hideOnEsc: false
-	  });
+	  }));
 	}
 	client.createRoot(document.getElementById('root')).render( /*#__PURE__*/React.createElement(App, null));
 

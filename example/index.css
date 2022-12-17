@@ -1,8 +1,27 @@
+body {
+   font-family: Lato, sans-serif;
+   text-align: center;
+   margin: 100px 30px;
+}
+
+h1 {
+   margin-bottom: 0;
+}
+
+p {
+   color: #666;
+   font-size: 18px;
+}
+
 .autocomplete {
-   font-family: 'Lato';
-   font-size: 15px;
+   margin-top: 40px;
+   font-size: 18px;
    position: relative;
    display: inline-block;
+   background-color: yellow;
+   max-width: 300px;
+   width: 100%;
+   text-align: left;
 }
 
 .autocomplete_input {
@@ -11,7 +30,8 @@
    border: 1px solid #ddd;
    padding: 10px;
    display: block;
-   width: 150px;
+   width: 100%;
+   box-sizing: border-box;
    outline: none;
 }
 
