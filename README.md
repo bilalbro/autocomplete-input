@@ -2,6 +2,8 @@
 
 A lightweight autocomplete input, powered by React.
 
+![Screenshot of webpage using AutocompleteInput](https://user-images.githubusercontent.com/98707204/207377585-9a826aa6-7273-4707-ad41-9bcb3dcb9bf9.png)
+
 ## Motivation
 
 For the recipe manager application, that I am currently working on at the time of this writing, I felt the need of an autocompleting input so that I could easily enter the names of the ingredients for a new recipe, based on all the ingredient names added up to that point. 
@@ -65,3 +67,8 @@ Here are the supported props:
 - **`getHiddenInputValue`** (`function`) - A function that takes the selected suggestion entry (from the provided `data`) and returns a string to be used as the `value` attribute of the hidden input field.
 - **`getSuggestionValue`** (`function`) - A function that takes a suggestion entry (from the provided `data`) and returns a React node, i.e. a string or a React element, to be displayed for the suggestion.
 - **`filterFunction`** (`function`) - A function that specifies whether a given entry matches the value entered in the autocompleting input field (i.e the displayed input). The function gets two arguments: the value of the input field, followed by the current `data` entry. If `true` is returned`, the entry is added to the list of current suggestions, or else it's ignored.
+
+
+## Example
+
+To see a working example, head over to the `example` directory in the repo, and clone it to your computer. Then just open up the `index.html` file in your browser and voila! — you have a live autocompleter in front of you.
